@@ -9,11 +9,14 @@ import java.util.List;
 import jakarta.inject.Named;
 import jakarta.enterprise.context.RequestScoped;
 
-@Named(value = "bean")
+/**
+ *
+ * @author Wassim
+ */
+@Named(value = "bean2")
 @RequestScoped
-public class Bean {
-
-    private int nombre;
+public class Bean2 {
+private int nombre;
 
     public int getNombre() {
         return nombre;
@@ -23,7 +26,7 @@ public class Bean {
         this.nombre = nombre;
     }
     public String afficher() {
-    return "affichage_3?nb="+ nombre + "&amp;faces-redirect=true";
+    return "affichage_4?nb="+ nombre + "&amp;faces-redirect=true";
     }
     public List<Integer> getNombresSuivants() {
         int nb = 5;
@@ -33,4 +36,5 @@ public class Bean {
         }
         return l;
     }
+    
 }
